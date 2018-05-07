@@ -1,0 +1,16 @@
+{
+  "name": "people_merger_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "mz": "^2.7.0",
+    "path": "^0.12.7"
+  }
+}
