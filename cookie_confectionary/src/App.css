@@ -1,0 +1,50 @@
+
+body {
+  margin: auto;
+  width: 50%;
+  background-image: url("./vintage-concrete.png");
+  text-align: center;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.cookie-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+.clear-cookies-button {
+  width: 200px;
+  margin-top: 100px;
+  border: 3px solid grey;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px grey;
+  border-radius: 10px;
+  position: relative;
+  padding: 0 20px;
+}
+.cookie {
+  width: 400px;
+  margin: 0 auto;
+  border: 3px solid grey;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px grey;
+  border-radius: 10px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.cookie:hover{
+  box-shadow: 0 2px grey;
+  top: 2px;
+}
+
+.cookie:active{
+  box-shadow: 0 0 grey;
+  top: 6px;
+}
