@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<div class="header">
+    <h1>Login</h1>
+</div>
+<form action="/login" method="POST" accept-charset="utf-8">
+    <div class="email-input">
+        <label for="email" class="labels e-label-login">Email:</label>
+        <input name="email"  class="inputFields" type="text"> 
+    </div>
+    <div class="password-input">
+        <label for="password">Password:</label>
+        <input name="password" class="inputFields" type="password">  
+    </div>
+    <div >
+        <button type="login" class="inputFields" id="login-button">Login</button>  
+    </div>
+</form>
+<form action="/signup" method="GET" accept-charset="utf-8">
+    <div>
+        <button type="signup" class="inputFields" id="signup-button">InstantPic Signup</button>  
+    </div>
+</form>
+
+<% include ./partials/footer %>

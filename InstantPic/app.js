@@ -13,9 +13,8 @@ var index = require('./routes/index');
 var users = require('./routes/users')(passport);
 var comments = require('./routes/comments');
 require('./strategies/passport-local')(passport);
-
 var bcrypt = require('bcryptjs');
-// uncomment after placing your favicon in /public
+
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -25,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(passport.initialize());
 
-
+app.set('view engine', 'ejs');
 app.use('/users', users);
 // app.use('/comments', comments);
 // catch 404 and forward to error handler
