@@ -7,11 +7,12 @@ class MovieList extends Component {
 	}
 
 	onSearch(event) {
-		// ...
+		const search = event.target.value;
+		this.props.fetchMovie(search);
 	}
 
 	componentDidMount() {
-		// ...
+		this.props.loadMovies
 	}
 
 	render() {

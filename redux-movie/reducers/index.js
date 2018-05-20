@@ -23,14 +23,14 @@ export default function(state = initialState, action) {
         isLoading: true,
         isError: false,
         isSuccess: true,
-        movies: action.movies
+        movies: action.payload
       };
     }
 
     case LOAD_FAILURE: {
       return {
         ...state,
-        isLoading: false,
+        isLoading: true,
         isError: true,
         isSuccess: false
       }

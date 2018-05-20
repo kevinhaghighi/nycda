@@ -9,30 +9,27 @@ import fetch from 'isomorphic-fetch';
 // action creators go here
 
 export const loadMovies = (searchParam, dispatch) => {
-	// fetch happens inside load request action creator!
-
+	// fetch happens inside load request action4
 	// indicate we are loading movies now
-	dispatch(requestMovies());
+	return dispatch => {
+    fetch(`https://omdbapi.com/?apiKey=58381d17=${searchParam}`)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        dispatch(someActionCreator(responseJson))
+      })
+      .catch((err) => { 
+          dispatch({type: LOAD_FAILURE})
+      })
+  }
 
-	fetch(`SOME_API_URL`)
-  .then((response) => response.json())
-  .then((responseJson) => {
-    // "we successfully got back a response" scenario
-    // requirement: generate a view with the movie results upon successfully getting a response
-    // --> do things here that will eventually update the view
+}
 
-    // dispatch EMITS AN ACTION
-    // (an action <--> view only)
-    // --> dispatch change the view to the success view
-
-    dispatch(someActionCreator(responseJson))
-  })
-  // ...what about failure?...
-};
 
 export const requestMovies = () => {
-	// create action for requesting movies
-	// ...
+  return {
+    type: LOAD_REQUEST,
+    payload: movies
+  }
 };
 
 export const someActionCreator = (jsonData) => {
