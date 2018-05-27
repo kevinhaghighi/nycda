@@ -36,7 +36,6 @@ $(document).ready(function(){
 	    	player[0].play();
 	    	return trackNum;
 	    };
-
 	    this.loadNext = function(){
 	    	audio.pause();
 	    	if (trackNum === tracks.length - 1){
@@ -46,12 +45,8 @@ $(document).ready(function(){
 	    	}
 	    	
 	    	this.loadInSong(trackNum);
-
-
 	    	return trackNum;
 	    }
-
-
 
 	     this.loadPrev = function(){
 	    	audio.pause();
@@ -59,14 +54,10 @@ $(document).ready(function(){
 	    		trackNum = tracks.length -1;
 	    	} else {
 	    		trackNum = trackNum - 1;
-	    	}
-	 
+	    	}	 
 	    	this.loadInSong(trackNum);
-
 	    	return trackNum;
 	    }
-
-
 
 	    this.addSong = function() {
 	       let location = $("#addSong").val();
@@ -78,7 +69,6 @@ $(document).ready(function(){
      	}
 
 	};
-
 	function Song(songName, title, location){
 		this.songName = songName
 		this.title = title;
@@ -88,8 +78,7 @@ $(document).ready(function(){
 	let pressure = new Song("Under Pressure", "Under Pressure.mp3", "audio/Under Pressure.mp3");
 
 	jukeBox = new Jukebox();
-		jukeBox.addSongToTrack(pressure);
-	
+		jukeBox.addSongToTrack(pressure);	
 	//display the songs
 	jukeBox.displaySongs();
 
