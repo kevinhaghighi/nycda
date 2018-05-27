@@ -1,0 +1,32 @@
+<html class="html">
+<head>
+    <meta charset="utf-8">
+    <title>Jukebox</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="background"></div>
+
+    <audio id="myAudio">
+        <source src="" type="audio/mp3">
+    </audio>
+
+    <div id="list_songs">
+    </div>
+    <div id="button-pos">
+        <button class="buttons" id="prevBtn" onclick="jukeBox.loadPrev()">Prev</button>
+        <button class="buttons" id="playBtn" onclick="jukeBox.play()">Play</button>
+        <button class="buttons" id="stopBtn" onclick="jukeBox.stop()">Stop</button>
+        <button class="buttons" id="nextBtn" onclick="jukeBox.loadNext()">Next</button>
+    </div>
+    <div>
+        <input id="addName" class="sizing" placeholder="Input Name"></input>
+        <input id="addTitle" class="sizing" placeholder="Input Title"></input>
+        <input id="addSong" class="sizing" placeholder="Input Url"></input>
+        <button id="submitBtn" class="sizing" onclick="jukeBox.addSong()">Add Song</button>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+   </html>
